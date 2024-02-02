@@ -19,7 +19,11 @@ class Database:
         __connector = f'mysql+mysqlconnector:'\
                     f'//{DB_USERNAME}:{DB_PASSWD}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
         
-        self.engine = create_engine(__connector)
+        try:
+            self.engine = create_engine(__connector)
+        except BaseException:
+            print("Can't connect to database")
+            
     def _get_engine(self):
         return self.engine
         
