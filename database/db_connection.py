@@ -18,12 +18,12 @@ class Database:
     def __init__(self) -> None:
         __connector = f'mysql+mysqlconnector:'\
                     f'//{DB_USERNAME}:{DB_PASSWD}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
-        
+        self.engine = None
         try:
             self.engine = create_engine(__connector)
         except BaseException:
             print("Can't connect to database")
-            
+
     def _get_engine(self):
         return self.engine
         
