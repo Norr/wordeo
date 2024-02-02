@@ -8,9 +8,9 @@ load_dotenv()
 DB_PASSWD= os.getenv("DB_PASSWD")
 KEY = os.getenv("KEY")
 F = Fernet(KEY)
-DB_NAME = "baza67_wordeo"
-DB_HOST = "22267.m.tld.pl"
-DB_USERNAME = "admin67_wordeo"
+DB_NAME = os.getenv("DB_NAME")
+DB_HOST = os.getenv("DB_HOST")
+DB_USERNAME = os.getenv("DB_USER")
 DB_PASSWD = F.decrypt(DB_PASSWD.encode()).decode()
 DB_PORT = 3306
 
