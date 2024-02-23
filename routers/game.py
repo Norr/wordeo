@@ -1,22 +1,16 @@
-import random
-import time
 from typing import Annotated
 
-from starlette import status
-from starlette.responses import RedirectResponse
 
-from fastapi import Depends, HTTPException, APIRouter, status, Request
-from database.models import Users, Words, Translations, UserPoints
+
+from fastapi import Depends, APIRouter,  Request
+from database.models import UserPoints
 from database.db_connection import Database
 from sqlalchemy.orm import Session
-from sqlalchemy.exc import SQLAlchemyError
-from sqlalchemy import Engine, and_, select, update
-from pydantic import BaseModel, Field
+from sqlalchemy import Engine, select, update
 from dotenv import load_dotenv
 from .auth import get_current_user, get_user_exception
 from game.game import Game
 
-import requests
 
 router = APIRouter(
     prefix="/game",

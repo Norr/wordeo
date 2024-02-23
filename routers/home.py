@@ -1,16 +1,15 @@
 
 import sys
 from fastapi.templating import Jinja2Templates
-from sqlalchemy import Engine
+
 sys.path.append("..")
 
 from starlette import status
 from fastapi.responses import HTMLResponse
-from fastapi import APIRouter, Depends, Request
+from fastapi import APIRouter,  Request
 from starlette import status
 from starlette.responses import RedirectResponse
 from .auth import get_current_user
-from database.models import Users, UserPoints
 from database.db_connection import Database
 
 templates = Jinja2Templates(directory="templates")

@@ -1,9 +1,9 @@
 import random
-from database.models import Users, Words, Translations, UserPoints
+from database.models import Words, Translations, UserPoints
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError
-from sqlalchemy import Engine, and_, func, or_, select, update
-from pathlib import Path
+from sqlalchemy import Engine, and_, func, or_, select
+
 
 class Game:
     def __init__(self, eng:Engine, lang_1:str, lang_2:str, user_id:(int|None)=None, nr_of_words:int=4) -> None:

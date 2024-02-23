@@ -3,14 +3,13 @@ import sys
 import deepl
 import json
 
-from fastapi import Depends, HTTPException, APIRouter, status, Request
-from fastapi.encoders import jsonable_encoder
-from database.models import Users, Words, Translations, UserPoints
+from fastapi import Depends, APIRouter
+
+
 from database.db_connection import Database
-from sqlalchemy.orm import Session
-from sqlalchemy.exc import SQLAlchemyError
+
 from sqlalchemy import Engine, func, select
-from pydantic import BaseModel, Field
+
 from dotenv import load_dotenv
 import translation.translation as trnsl
 

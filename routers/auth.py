@@ -3,7 +3,6 @@ sys.path.append("..")
 
 import os
 import validators
-import json
 import requests
 
 from fastapi import Depends, HTTPException, status, APIRouter, Request, Response

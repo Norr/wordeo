@@ -4,9 +4,7 @@ import starlette.status as status
 
 from fastapi import FastAPI, responses
 from routers import auth, translate, game, home
-from fastapi.encoders import jsonable_encoder
 from starlette.staticfiles import StaticFiles
-import os
 import uvicorn
 
 app = FastAPI()
