@@ -1,0 +1,79 @@
+{% include 'layout.html' %}
+{% include 'navbar.html' %}
+<div class="alert alert-danger" role="alert">
+ 
+</div>
+<div class="container-fluid">
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" id="translate" aria-current="page" href="#">Search/Translate</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" id="game">Game</a>
+    </li>
+    
+  </ul>
+  <div class="home-content">
+    <div class="translate">
+        <div class="row">
+            <div class="col">
+                <div class="btn-group translate_from translation" role="group" aria-label="Translate from">
+                    <button type="button" class="btn btn-primary">PL</button>
+                    <button type="button" class="btn btn-primary">EN</button>
+                    <button type="button" class="btn btn-primary">DE</button>
+                </div>
+                <div class="container">
+                    <label for="text_from " class="form-label">Input word to translate:</label>
+                    <input type="text" id="text_from" class="form-control word_to_translate" />
+                    <button type="submit" class="btn btn-primary mb-3 translate_button">Translate</button>
+                    
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group translate_to translation" role="group" aria-label="Translate to">
+                    <button type="button" class="btn btn-primary">PL</button>
+                    <button type="button" class="btn btn-primary">EN-US</button>
+                    <button type="button" class="btn btn-primary">EN-GB</button>
+                    <button type="button" class="btn btn-primary">DE</button>
+                </div>
+                <div class="translation-block-text">
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game">
+        <div class="col">
+            Choose languages (min. 2):
+            <div class="btn-group game_languages" role="group" aria-label="Game languages">
+                <button type="button" class="btn btn-primary">PL</button>
+                <button type="button" class="btn btn-primary">EN</button>
+                <button type="button" class="btn btn-primary">DE</button>
+                
+            </div>
+            <button type="button" class="btn btn-outline-success disabled start-game-btn">Start game</button>
+        </div>
+        <hr />
+        <h6>Drawn word:</h6>
+            <h2 class="game-word"></h2>
+            <div class="container game-options">
+            </div>
+            <div class="cat">
+                <img src="{{ url_for('static', path='img/walking_cat.png') }}" alt="cat" />
+            </div>
+            <div class="bubbles">
+                <img src="{{ url_for('static', path='img/bubble-ok.svg') }}" alt="bubble_ok" class="bubble-ok" />
+                <img src="{{ url_for('static', path='img/bubble-wrong.svg') }}" alt="wrong" class="bubble-wrong" />
+                <img src="{{ url_for('static', path='img/bubble-dices.svg') }}" alt="bubble_dices" class="bubble-dices" />
+            </div>
+            
+    </div>
+  </div>
+</div>
+<script>
+    $.getJSON("/game/get_user_points", function(result){
+        $(".user-points").html(result.points)
+        
+    })
+</script>
+

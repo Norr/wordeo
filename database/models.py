@@ -48,6 +48,7 @@ class Translations(Base):
     trn_lang_to_fkey: Mapped[int] = mapped_column(INTEGER,
                                                   ForeignKey('words.wrd_id'),
                                                   nullable=False)
+    trn_translation: Mapped[str] = mapped_column(VARCHAR(10))
     word_1 = relationship("Words", foreign_keys=[trn_lang_from_fkey])
     word_2 = relationship("Words", foreign_keys=[trn_lang_to_fkey])
     

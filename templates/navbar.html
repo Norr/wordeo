@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg home-nav">
+    <div class="container-fuid container">
+        <div class="username navbar-text">
+            {% if user is defined %}                
+                {{ user['username'].title() }}
+            {% endif %}</div>
+        <div class="points">
+            <div class="user-points navbar-text"></div>
+            <div class="coin-image navbar-text"><img src="{{ url_for('static', path='img/coin_icon.svg') }}" alt="coin" /></div>
+            <a class="btn btn-lg btn-outline-light logout" href="/auth/logout" role="button">Logout</a>
+        </div>
+        
+    </div>
+</nav>
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/css/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/css/bootstrap/bootstrap-grid.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/css/bootstrap/bootstrap-reboot.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/css/bootstrap/bootstrap-utilities.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/css/animate.min.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Nag+Mundari&family=Protest+Strike&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/css/style.css') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Wordeo</title>
+
+</head>
+<body>
+    
+<!-- {% include 'navbar.html' %} -->
+
+{% block content %}
+
+{% endblock %}
+
+<script src="https://www.google.com/recaptcha/api.js?render=6Lfij3wpAAAAADzTgsttbGcHDJlkRaw3BQpWHNMB"></script>
+<script src="{{ url_for('static', path='js/jquery-3.7.1.min.js') }}"></script>
+<script src="{{ url_for('static', path='js/bootstrap/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', path='js/script.js') }}" type="text/javascript"></script>
+
+</body>
+</html>

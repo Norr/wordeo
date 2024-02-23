@@ -1,3 +1,5 @@
+import sys
+sys.path.append("..")
 import os
 
 from dotenv import load_dotenv
@@ -5,8 +7,10 @@ from cryptography.fernet import Fernet
 from sqlalchemy import create_engine
 
 load_dotenv()
+
 DB_PASSWD= os.getenv("DB_PASSWD")
 KEY = os.getenv("KEY")
+KEY = KEY if KEY.endswith("=") else KEY + "="
 F = Fernet(KEY)
 DB_NAME = os.getenv("DB_NAME")
 DB_HOST = os.getenv("DB_HOST")

@@ -1,0 +1,237 @@
+.home-nav {
+    background-color: #6600CC;
+    height: 10vh;
+    
+}
+
+.home-nav .container > div, .user-points{
+    color: #fff;
+    font-size: 2rem;
+}
+.home-nav .container .points{
+    float: left;
+    display: block;
+}
+.points {
+    padding: 0;
+    margin: 0;
+}
+.points > div{
+    display: inline-block;
+     padding: 0;
+    margin: 0;
+}
+.coin-image img {
+    width: 6vh;
+    height: auto;
+}
+
+.logout{
+    margin-left: 5vw;
+}
+.nav-tabs{
+    margin-top: 1rem;
+}
+.home-content{
+    
+    border-left:var(--bs-border-color) 1px solid;
+    border-right:var(--bs-border-color) 1px solid;
+    border-bottom:var(--bs-border-color) 1px solid;
+    padding: 1rem;
+    
+}
+
+.game{
+    display: none;
+    overflow: hidden;
+    margin-bottom: 10px;
+    min-height: 22em;
+}
+.translate_button{
+    margin-top: 0.5rem;
+}
+.translation-block-text{
+    width: 90%;
+    min-height: 60%;
+    height: auto;
+    margin: 0.5rem;
+    padding-top: 0.2rem;
+    padding-left: 0.7rem;
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    font-size: 2.5rem;
+    display: block;
+}
+div.translation-block-text div.alternatives {
+   font-size: 1.5rem;;
+}
+div.translation-block-text div.alternatives ul li {
+    list-style-type: none;
+}
+
+div.game-options div.option {
+    text-align: center;
+    width: 18rem;;
+    height: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #9800CC;
+    border: 3px solid #632877;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bolder;
+    float: left;
+    margin: 0.5rem;
+    transition: background-color 300ms linear;
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    -o-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    border-radius: 15px;
+    
+}
+
+div.game-options div.option:hover{
+    background-color: #1196BE;
+    cursor: pointer;
+}
+
+div.game-options div.option:active{
+    background-color: #264D3D;
+    border-width: 5px;
+    cursor: pointer;
+    border-color: #85A296;
+}
+.cat img{
+    width: 12rem;
+    height: auto;
+    position: absolute;
+    top:20rem;
+    right: 25px;
+}
+
+
+.bubbles img {
+    width: 8rem; 
+    height: auto;
+    position: absolute;
+    top:15rem;
+    right: 160px;
+    display:none;
+}
+.alert{
+    /* display: none; */
+    display: none;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    color: #616161;
+    text-shadow: #e0e0e0 1px 1px 0;
+    color: #A11A45;
+    
+}
+
+span.registrationInfo{
+    font-size: 0.7rem;
+    line-height: 0.1rem;
+}
+.passwordVerification{
+    display: none;
+}
+
+.passwordVerification ul li {
+    margin:0.5rem 1rem;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+   }
+
+.passwordVerification ul, li {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+  }
+  .passwordVerification {
+    position:absolute;
+    width:70%;
+    padding:15px;
+    background:#fefefe;
+    margin-top: 0.5rem;
+    font-size:.875em;
+    border-radius:5px;
+    box-shadow:0 1px 3px #ccc;
+    border:1px solid #ddd;
+   }
+   .passwordVerification::before {
+    content: "\25B2";
+    position:absolute;
+    top:-12px;
+    left:45%;
+    font-size:14px;
+    line-height:14px;
+    color:#ddd;
+    text-shadow:none;
+    display:block;
+   }
+   .invalidPasswordRule{
+    color:#ec3f41;
+   }
+   .validPasswordRule{
+    color:#3a7d34;
+   }
+
+   .user_created{
+    display:none;
+   }
+
+   span.title{
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+   }
+   .supscription{
+    font-size: 1rem;
+    color:#a0a0a0
+   }
+/* .logout {
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: pink;
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
+    --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+    --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+  } */
+
+  @media only screen and (max-width: 499px) { 
+    .cat img{
+        width: 6rem;
+        height: auto;
+        position: absolute;
+        top:15rem;
+        right: 25px;
+    }
+    
+    
+    .bubbles img {
+        width: 4rem; 
+        height: auto;
+        position: absolute;
+        top:15rem;
+        right: 120px;
+        display:none;
+    }
+
+    div.game-options div.option {
+
+        width: 15rem;;
+        height: 8rem;
+        font-size: 1.7rem;
+        text-align: center;
+    }
+}

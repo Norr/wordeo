@@ -1,0 +1,132 @@
+{% include 'layout.html' %}
+
+<div class="container" style="margin-top: 5rem">
+    <span class="title"><h1>Wordeo<sup class="supscription">version alpha</sup></h1></span>
+    <div class="card" style="width: 18rem; margin:0 auto;">
+        <div class="card-header">
+            Login
+        </div>
+        <div class="card-body">
+            <div class="alert alert-success user_created" role="alert">
+                User succesfful created.
+            </div>
+            {% if msg %}
+            {% if msg == 'Logout Successful'%}
+            <div class="alert alert-success" role="alert">
+                {{msg}}
+            </div>
+            {% else %}
+            <div class="alert alert-danger" role="alert">
+                {{msg}}
+            </div>
+            {% endif %}
+            {% endif %}
+
+            <form method="POST" action="/auth">
+                <div class="form-group mb-3">
+                    <label>Username</label>
+                    <input type="text" class="form-control"
+                           name="email" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+        <div class="card-footer text-muted">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerFormModal">Register?</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="registerFormModal" tabindex="-1" aria-labelledby="registerFormModalLabel" aria-hidden="true">
+    <form id="registrationForm" novalidate>
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerFormModalLabel">Register user</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+                <div class="mb-3">
+                    <label  for="registrationFormEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="registrationFormEmail" name="email" required>
+                    <div class="invalid-feedback">
+                        <span class="emailInvalidFeedback"></span>
+                    </div>
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="registrationFormUsername" class="form-label">Username<br /><span class="registrationInfo">
+                        Letters and numbers are allowed, no special characters or spaces. Size from 4 to 10 characters.
+                    </span></label>
+                    <input type="text" class="form-control" name="username" id="registrationFormUsername" required>
+                    <div class="invalid-feedback">
+                        <span class="usernameInvalidFeedback"></span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="registrationFormPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" id="registrationFormPassword" required>
+                    <div class="passwordVerification">
+                        <h6>Password must meet the following requirements:</h6>
+                        <ul>
+                            <li class="passwordRequirementsSize invalidPasswordRule">Between <strong>8 to 32 characters</strong></li>
+                            <li class="passwordRequirementsSpaces invalidPasswordRule">No spaces</li>
+                            <li class="passwordRequirementsCapitalLeter invalidPasswordRule">At least <strong>one capital letter</strong></li>
+                            <li class="passwordRequirementsNumber invalidPasswordRule">At least <strong>one number</strong></li>
+                            <li class="passwordRequirementsSpecialCharacters invalidPasswordRule">At least <strong>one special character</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="registrationFormPasswordVerify" class="form-label">Verify Password</label>
+                    <input type="password" class="form-control" name="password2" id="registrationFormPasswordVerify" required>
+                    <div class="invalid-feedback">
+                        <span class="registrationFormPasswordVerifyInvalidFeedback">
+                            Verify field not match with password.
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary closeButton" data-bs-dismiss="modal">Close</button>
+                <button class="btn btn-primary" type="submit">Register</button>
+            </div>
+            </div>
+        </div>
+    </form>
+    </div>
+    
+                <!-- <form method="POST" action="/auth/register">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Email</label>
+                            <input type="email" class="form-control" name="email" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Username</label>
+                            <input type="text" class="form-control" name="username" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Verify Password</label>
+                        <input type="password" class="form-control" name="password2" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div> -->
