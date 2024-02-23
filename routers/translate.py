@@ -1,7 +1,6 @@
 import os
 import sys
 import deepl
-import json
 
 from fastapi import Depends, APIRouter
 
