@@ -11,7 +11,7 @@ $("form#registrationForm").on("submit", function(e){
   if (!$(this).find("input").hasClass("is-invalid") && email != "" && username != "" & password != "" && verify_password != ""){
     grecaptcha.ready(function() {
       grecaptcha.execute('6Lfij3wpAAAAADzTgsttbGcHDJlkRaw3BQpWHNMB', {action: 'submit'}).then(function(token) {
-        $.post( "/auth/register", { email: email, username: username, password: password, verify_password:  verify_password, token:token} )
+        $.post( "https://wordeo.eu/auth/register", { email: email, username: username, password: password, verify_password:  verify_password, token:token} )
         .done(function(){
           //<button class="btn btn-primary registrButton" type="submit">Register</button>
           $("form#registrationForm").trigger("reset");
